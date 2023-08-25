@@ -15,7 +15,6 @@ public class App {
         ingresoAntiguedad = (0.15) * ingresoBruto;
         ingresototales = ingresoBruto + ingresoAntiguedad;
 
-        
         montoSindicato = (0.01) * ingresoBruto;
         deduccionInss = (0.07) * ingresototales;
         deduccionIR = (0.156) * ingresototales;
@@ -23,9 +22,20 @@ public class App {
         deduccionesTotales = deduccionInss + deduccionIR + montoSindicato;
 
         ingresoNeto = ingresototales - deduccionesTotales;
-        
+
         inssPatronal = (0.225) * ingresototales;
 
-        System.out.println("Hello, World!");
+        System.out.println("Sus ingresos brutos son: C$"+ ingresoBruto);
+        System.out.println("Sus ingresos totales son: C$" + ingresototales);
+        System.out.println("::::::::::::::::::::::::::::::::::::");
+        System.out.println("Sus deducciones totales fueron: C$" + deduccionesTotales +
+                            "\n" + "\tMonto por afiliacion del sindicato: C$"+ montoSindicato+
+                            "\n" + "\tDeduccion Inss: C$"+ deduccionInss +
+                            "\n" + "\tDeduccion IR: C$"+ deduccionIR);
+        System.out.println("::::::::::::::::::::::::::::::::::::");
+        System.out.println("La deduccion de la empresa son: C$" + inssPatronal);
+        System.out.println("::::::::::::::::::::::::::::::::::::");
+        System.out.println("Sus ingresos netos son: C$" + ingresoNeto);
+        System.out.println("Sus ingresos por antiguedad son: C$" + ingresoAntiguedad);
     }
 }
